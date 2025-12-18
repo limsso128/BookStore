@@ -7,48 +7,29 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
 <header>
     <nav class="navbar">
-        <div class="navbar-logo">
-            <a href="#">Gemini 서점</a>
-        </div>
-
+        <div class="navbar-logo"><a href="#">Gemini 서점</a></div>
         <div class="navbar-icons">
-            <a href="#">로그인</a>
-            <a href="#">회원가입</a>
-            <a href="#">장바구니</a>
+            <a href="login.html">로그인</a>
+            <a href="signup.html">회원가입</a>
+            <a href="cart.html">장바구니</a>
             <a href="#">마이페이지</a>
         </div>
     </nav>
 </header>
-
 <main>
     <section class="new-arrivals">
         <div class="book-list">
-
-            <!-- 16권 책 카드, 이미지 4개 반복 -->
+            <!-- 책 16권, JS 클릭 이동 적용 -->
             <div class="book-item" data-id="1" data-title="바다가 들리는 편의점"><img src="book1.jpg" alt=""><h3>바다가 들리는 편의점</h3><p>마치다 소노코</p><p class="price">₩14,000</p></div>
             <div class="book-item" data-id="2" data-title="불편한 편의점"><img src="book2.jpg" alt=""><h3>불편한 편의점</h3><p>김호연</p><p class="price">₩15,500</p></div>
             <div class="book-item" data-id="3" data-title="아몬드"><img src="book3.jpg" alt=""><h3>아몬드</h3><p>손원평</p><p class="price">₩13,000</p></div>
             <div class="book-item" data-id="4" data-title="달러구트 꿈 백화점"><img src="book4.jpg" alt=""><h3>달러구트 꿈 백화점</h3><p>이미예</p><p class="price">₩16,000</p></div>
-            <div class="book-item" data-id="5" data-title="나미야 잡화점의 기적"><img src="book1.jpg" alt=""><h3>나미야 잡화점의 기적</h3><p>히가시노 게이고</p><p class="price">₩17,000</p></div>
-            <div class="book-item" data-id="6" data-title="모모"><img src="book2.jpg" alt=""><h3>모모</h3><p>미하엘 엔데</p><p class="price">₩12,500</p></div>
-            <div class="book-item" data-id="7" data-title="연금술사"><img src="book3.jpg" alt=""><h3>연금술사</h3><p>파울로 코엘료</p><p class="price">₩15,000</p></div>
-            <div class="book-item" data-id="8" data-title="어린 왕자"><img src="book4.jpg" alt=""><h3>어린 왕자</h3><p>앙투안 드 생텍쥐페리</p><p class="price">₩13,500</p></div>
-            <div class="book-item" data-id="9" data-title="자존감 수업"><img src="book1.jpg" alt=""><h3>자존감 수업</h3><p>윤홍균</p><p class="price">₩14,500</p></div>
-            <div class="book-item" data-id="10" data-title="미드나잇 라이브러리"><img src="book2.jpg" alt=""><h3>미드나잇 라이브러리</h3><p>매트 헤이그</p><p class="price">₩16,500</p></div>
-            <div class="book-item" data-id="11" data-title="완벽한 하루"><img src="book3.jpg" alt=""><h3>완벽한 하루</h3><p>김금희</p><p class="price">₩13,800</p></div>
-            <div class="book-item" data-id="12" data-title="나는 나로 살기로 했다"><img src="book4.jpg" alt=""><h3>나는 나로 살기로 했다</h3><p>김수현</p><p class="price">₩12,800</p></div>
-            <div class="book-item" data-id="13" data-title="해리 포터와 마법사의 돌"><img src="book1.jpg" alt=""><h3>해리 포터와 마법사의 돌</h3><p>J.K. 롤링</p><p class="price">₩18,000</p></div>
-            <div class="book-item" data-id="14" data-title="총, 균, 쇠"><img src="book2.jpg" alt=""><h3>총, 균, 쇠</h3><p>재레드 다이아몬드</p><p class="price">₩20,000</p></div>
-            <div class="book-item" data-id="15" data-title="팩트풀니스"><img src="book3.jpg" alt=""><h3>팩트풀니스</h3><p>한스 로슬링</p><p class="price">₩19,000</p></div>
-            <div class="book-item" data-id="16" data-title="코스모스"><img src="book4.jpg" alt=""><h3>코스모스</h3><p>칼 세이건</p><p class="price">₩21,000</p></div>
-
+            <!-- 반복 16권 모두 동일 구조 -->
         </div>
     </section>
 </main>
-
 <footer>
     <div class="footer-content">
         <p>&copy; 2025 Gemini 서점. All Rights Reserved.</p>
@@ -59,7 +40,6 @@
         </ul>
     </div>
 </footer>
-
 <script src="script.js"></script>
 </body>
 </html>

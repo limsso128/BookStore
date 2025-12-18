@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>장바구니 - Gemini 서점</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <nav class="navbar">
+        <div class="navbar-logo"><a href="index.html">Gemini 서점</a></div>
+        <div class="navbar-icons">
+            <a href="login.html">로그인</a>
+            <a href="signup.html">회원가입</a>
+            <a href="cart.html">장바구니</a>
+        </div>
+    </nav>
+</header>
+
+<main>
+<section class="cart-container" id="cart-container">
+    <h2>장바구니</h2>
+    <div id="cart-items"></div>
+    <p class="total-price" id="total-price">총합: ₩0</p>
+</section>
+</main>
+
+<footer>
+    <div class="footer-content">
+        <p>&copy; 2025 Gemini 서점. All Rights Reserved.</p>
+        <ul class="footer-links">
+            <li><a href="#">회사소개</a></li>
+            <li><a href="#">이용약관</a></li>
+            <li><a href="#">개인정보처리방침</a></li>
+        </ul>
+    </div>
+</footer>
+
+<script>
+function loadCart(){
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const container = document.getElementById('cart-items');
+    container.innerHTML = '';
+    let total = 0;
+    cart.forEach((item,index)=>{
+        total += parseInt(item.price.replace('₩','').replace(',',''));
+        const div = document.createElement('div');
+        div.className = 'cart-item';
+        div.innerHTML = `
+            <img src="${item.img}" alt="">
+            <div class="cart-item-info">
+                <h3>${item.title}</h3>
+                <p>${item.author}</p>
+                <p class="price">${item.price}</p>
+            </div>
+            <button class="remove-btn" data-index="${index}">삭제</button>
+        `;
+        container.appendChild(div);
+    });
+    document.getElementById('total-price').textContent = '총합: ₩'+total.toLocaleString();
+    
+    document.querySelectorAll('.remove-btn').forEach(btn=>{
+        btn.addEventListener('click',()=>{
+            const idx = btn.dataset.index;
+            cart.splice(idx,1);
+            localStorage.setItem('cart',JSON.stringify(cart));
+            loadCart();
+        });
+    });
+}
+
+document.addEventListener('DOMContentLoaded',loadCart);
+</script>
+</body>
+</html>
