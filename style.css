@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap');
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    margin: 0;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* 네비게이션 바 */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid #eee;
+}
+
+.navbar-logo a {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar-menu {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar-menu li {
+    margin: 0 1rem;
+}
+
+.navbar-menu a:hover {
+    color: #6c5ce7;
+}
+
+.navbar-icons a {
+    margin-left: 1rem;
+}
+
+/* 히어로 섹션 */
+.hero {
+    background-image: url('https://via.placeholder.com/1920x600');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 6rem 2rem;
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.btn {
+    background-color: #6c5ce7;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #564ab1;
+}
+
+/* 책 목록 */
+.bestsellers, .new-arrivals {
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.book-list {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.book-item {
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.book-item:hover {
+    transform: translateY(-10px);
+}
+
+.book-item img {
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.book-item h3 {
+    margin-top: 1rem;
+    font-size: 1.1rem;
+}
+
+.book-item p {
+    color: #777;
+    margin-top: 0.5rem;
+}
+
+/* 푸터 */
+footer {
+    background-color: #f8f9fa;
+    padding: 2rem;
+    text-align: center;
+    border-top: 1px solid #eee;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.footer-links li {
+    margin-left: 1.5rem;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    .navbar-menu {
+        display: none; /* 모바일에서는 메뉴 숨김 처리 (햄버거 메뉴로 대체 필요) */
+    }
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+    .footer-content {
+        flex-direction: column;
+    }
+    .footer-links {
+        margin-top: 1rem;
+    }
+}
